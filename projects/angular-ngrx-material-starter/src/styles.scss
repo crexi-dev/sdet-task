@@ -27,34 +27,34 @@
 @import './app/features/examples/examples/examples.component.scss-theme';
 
 @mixin custom-components-theme($theme) {
-  @include anms-styles-reset-theme($theme);
-  @include anms-app-component-theme($theme);
-  @include anms-about-component-theme($theme);
-  @include anms-big-input-component-theme($theme);
-  @include anms-notifications-component-theme($theme);
-  @include anms-todos-container-component-theme($theme);
-  @include anms-stock-market-container-component-theme($theme);
-  @include anms-parent-component-theme($theme);
-  @include anms-child-component-theme($theme);
-  @include anms-examples-component-theme($theme);
+  @include crx-styles-reset-theme($theme);
+  @include crx-app-component-theme($theme);
+  @include crx-about-component-theme($theme);
+  @include crx-big-input-component-theme($theme);
+  @include crx-notifications-component-theme($theme);
+  @include crx-todos-container-component-theme($theme);
+  @include crx-stock-market-container-component-theme($theme);
+  @include crx-parent-component-theme($theme);
+  @include crx-child-component-theme($theme);
+  @include crx-examples-component-theme($theme);
 }
 
 .default-theme {
-  @include mat.all-component-themes($anms-theme);
-  @include custom-components-theme($anms-theme);
+  @include mat.all-component-themes($crx-theme);
+  @include custom-components-theme($crx-theme);
 }
 
 .light-theme {
-  @include mat.all-component-themes($anms-light-theme);
-  @include custom-components-theme($anms-light-theme);
+  @include mat.all-component-themes($crx-light-theme);
+  @include custom-components-theme($crx-light-theme);
 }
 
 .black-theme {
-  @include mat.all-component-themes($anms-black-theme);
-  @include custom-components-theme($anms-black-theme);
+  @include mat.all-component-themes($crx-black-theme);
+  @include custom-components-theme($crx-black-theme);
 }
 
 .nature-theme {
-  @include mat.all-component-themes($anms-nature-theme);
-  @include custom-components-theme($anms-nature-theme);
+  @include mat.all-component-themes($crx-nature-theme);
+  @include custom-components-theme($crx-nature-theme);
 }

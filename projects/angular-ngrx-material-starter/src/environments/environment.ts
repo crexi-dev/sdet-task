@@ -6,7 +6,7 @@
 const packageJson = require('../../../../package.json');
 
 export const environment = {
-  appName: 'Angular Ngrx Material Starter',
+  appName: 'Crexi SDET Task',
   envName: 'DEV',
   production: false,
   test: false,

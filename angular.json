@@ -13,7 +13,7 @@
       },
       "root": "projects/angular-ngrx-material-starter",
       "sourceRoot": "projects/angular-ngrx-material-starter/src",
-      "prefix": "anms",
+      "prefix": "crx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -136,21 +136,42 @@
             "tsConfig": [
               "projects/angular-ngrx-material-starter/tsconfig.app.json",
               "projects/angular-ngrx-material-starter/tsconfig.spec.json",
-              "projects/angular-ngrx-material-starter/e2e/tsconfig.json"
+              "projects/angular-ngrx-material-starter/cypress/tsconfig.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@cypress/schematic:cypress",
           "options": {
-            "protractorConfig": "projects/angular-ngrx-material-starter/e2e/protractor.conf.js",
-            "devServerTarget": "angular-ngrx-material-starter:serve"
+            "devServerTarget": "angular-ngrx-material-starter:serve",
+            "watch": true,
+            "headless": false
           },
           "configurations": {
             "production": {
               "devServerTarget": "angular-ngrx-material-starter:serve:production"
             }
+          }
+        },
+        "cypress-run": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "devServerTarget": "angular-ngrx-material-starter:serve",
+            "configFile": "projects/angular-ngrx-material-starter/cypress.json"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angular-ngrx-material-starter:serve:production"
+            }
+          }
+        },
+        "cypress-open": {
+          "builder": "@cypress/schematic:cypress",
+          "options": {
+            "watch": true,
+            "headless": false,
+            "configFile": "projects/angular-ngrx-material-starter/cypress.json"
           }
         }
       }

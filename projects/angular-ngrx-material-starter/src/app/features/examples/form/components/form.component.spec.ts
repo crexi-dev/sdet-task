@@ -30,12 +30,12 @@ describe('FormComponent', () => {
 
   const getSaveButton = () =>
     loader.getHarness(
-      MatButtonHarness.with({ text: 'anms.examples.form.save' })
+      MatButtonHarness.with({ text: 'crx.examples.form.save' })
     );
 
   const getResetButton = async () =>
     loader.getHarness(
-      MatButtonHarness.with({ text: 'anms.examples.form.reset' })
+      MatButtonHarness.with({ text: 'crx.examples.form.reset' })
     );
 
   beforeEach(async () => {
@@ -59,14 +59,14 @@ describe('FormComponent', () => {
     const usernameInput = await getInput('username');
     const saveButton = await getSaveButton();
 
-    await usernameInput.setValue('tomastrajan');
+    await usernameInput.setValue('crexitest');
     await saveButton.click();
 
     expect(dispatchSpy).toHaveBeenCalledTimes(1);
     expect(dispatchSpy.calls.mostRecent().args[0].type).toBe('[Form] Update');
     expect(dispatchSpy.calls.mostRecent().args[0].form).toEqual({
       autosave: false,
-      username: 'tomastrajan',
+      username: 'crexitest',
       password: '',
       email: '',
       description: '',
@@ -80,7 +80,7 @@ describe('FormComponent', () => {
     const usernameInput = await getInput('username');
     const resetButton = await getResetButton();
 
-    await usernameInput.setValue('tomastrajan');
+    await usernameInput.setValue('crexitest');
     await resetButton.click();
     const usernameValue = await usernameInput.getValue();
 
