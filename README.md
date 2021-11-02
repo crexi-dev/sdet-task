@@ -11,7 +11,7 @@ Make sure the project runs locally using `ng serve`
 
 Run cypress tests using `ng e2e`, you should see 2 passing tests
 
-Add tests cases for CRUD Books `/examples/crud/`
+Add tests cases for CRUD Books `/examples/crud/` (adding, editing and deleting book data)
 
 You should spend no more that a couple of hours on this assignment
 
