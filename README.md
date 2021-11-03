@@ -11,9 +11,11 @@ Make sure the project runs locally using `ng serve`
 
 Run cypress tests using `ng e2e`, you should see 2 passing tests
 
-Add tests cases for CRUD Books `/examples/crud/` (adding, editing and deleting book data)
+Create tests cases for CRUD Books `/examples/crud/` (adding, editing and deleting book data)
 
 You should spend no more than a couple of hours on this assignment
+
+**Write autotests for those test cases in the cypress project**
 
 Submit a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
 
