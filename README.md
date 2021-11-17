@@ -1,5 +1,10 @@
 # Crexi SDET Task
 
+## Prerequisites
+You should have [Node](https://nodejs.org/en/download/) installed
+
+You should have [Angular CLI](https://angular.io/guide/setup-local) installed
+
 ## Assignment Instructions
 [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repository
 
