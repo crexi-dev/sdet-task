@@ -14,7 +14,7 @@ Install local packages using `npm install`
 
 Make sure the project runs locally using `ng serve`
 
-Run cypress tests using `ng e2e`, you should see 2 passing tests
+Run cypress tests using `ng e2e`, you should see 1 passing test
 
 Create tests cases for CRUD Books `/examples/crud/` (adding, editing and deleting book data)
 
