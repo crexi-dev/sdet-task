@@ -14,4 +14,15 @@
 // ***********************************************************
 
 // When a command from ./commands is ready to use, import with `import './commands'` syntax
-// import './commands';
+import './commands';
+
+declare global {
+  namespace Cypress {
+    interface Chainable {
+      confirmBookTitle(cardNumber: number): void;
+      confirmBookAuthor(cardNumber: number): void;
+      enterTitleAndAuthor(title: string, author: string): Chainable<any>;
+      verfiyOrderOfCards(): void;
+    }
+  }
+}

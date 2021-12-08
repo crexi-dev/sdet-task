@@ -53,7 +53,13 @@ export class AppComponent implements OnInit {
   constructor(
     private store: Store<AppState>,
     private storageService: LocalStorageService
-  ) {}
+  ) {
+    //@ts-ignore
+    if (window.Cypress) {
+      //@ts-ignore
+      window.AppComponent = this;
+    }
+  }
 
   private static isIEorEdgeOrSafari() {
     return ['ie', 'edge', 'safari'].includes(browser().name || '');
