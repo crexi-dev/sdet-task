@@ -1,9 +1,0 @@
-{
-  "integrationFolder": "projects/angular-ngrx-material-starter/cypress/integration",
-  "supportFile": "projects/angular-ngrx-material-starter/cypress/support/index.ts",
-  "videosFolder": "projects/angular-ngrx-material-starter/cypress/videos",
-  "screenshotsFolder": "projects/angular-ngrx-material-starter/cypress/screenshots",
-  "pluginsFile": "projects/angular-ngrx-material-starter/cypress/plugins/index.ts",
-  "fixturesFolder": "projects/angular-ngrx-material-starter/cypress/fixtures",
-  "baseUrl": "http://localhost:4200"
-}

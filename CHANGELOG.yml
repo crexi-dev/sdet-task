@@ -1,0 +1,12 @@
+--- 
+versions: 
+  - 
+    version: "12.5.0"
+    description: 
+      - "Migrate Cypress to version 10.0.2"
+      - "Add a Test Cases for CRUD Books that includes adding, editing and deleting book data"
+      - "Update the Cypress e2e Config file in angular.json"
+      - "Add a Changelog.yml"
+      - "Add GitHub workflows"
+    change-by: 
+      - toffer.lim87@gmail.com
