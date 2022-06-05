@@ -30,17 +30,17 @@ describe('CRUD Books Test', () => {
       cy.contains('Save').click();
       cy.log('Verify book updated title should exist');
       cy.contains(updatedTitle).should('be.visible');
-      cy.log('Verify book initial title should exist');
+      cy.log('Verify book initial title not exist');
       cy.contains(title).should('not.exist');
     });
 
 
     it('deletes a book', () => {
-      cy.contains(updatedTitle).click();
       cy.log('Deleting the Book');
 
+      cy.contains(updatedTitle).click();
       cy.get('fa-icon[icon="trash"]').click();
-      cy.log('Verify book title should not exist');
+      cy.log('Verify book/title should not exist');
       cy.contains(updatedTitle).should('not.exist');
     });
 
