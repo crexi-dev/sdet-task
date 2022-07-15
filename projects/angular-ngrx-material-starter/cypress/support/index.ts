@@ -15,3 +15,15 @@
 
 // When a command from ./commands is ready to use, import with `import './commands'` syntax
 // import './commands';
+
+import './crud'
+
+Cypress.on('uncaught:exception', (err, runnable) => {
+  // returning false here prevents Cypress from
+  // failing the test
+  return false
+})
+
+require('cypress-xpath')
+
+
