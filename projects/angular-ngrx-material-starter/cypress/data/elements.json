@@ -1,0 +1,29 @@
+
+{
+  "elememt": {
+      "exampleBtn": ".actions .mat-button-wrapper",
+      "saveBtn": "button.mat-primary",
+      "addBtn": "button.add",
+      "booklistEl": ".mat-card",
+      "form": "form",
+      "titleEl": "#mat-input-0",
+      "titleErorr":"#mat-error-0",
+      "authorEl": "#mat-input-1",
+      "authorErorr":"#mat-error-1",
+      "descriptionEl": "#mat-input-2",
+      "editIcon": "span button.mat-accent.ng-star-inserted",
+      "delectIcon": ".mat-warn",
+      "cancleIcon": "span.ng-star-inserted > :nth-child(3)",
+      "headline": ".mat-card h3"
+  },
+
+  "textVal": {
+      "ExamPleTitle": "Crexi SDET TaskCRUD books using @ngrx/entity & @ngrx/router-store",
+      "titleErrorText": "Title is required",
+      "authorErrorText": "Author is required",
+      "title": "Iron Man Story",
+      "Author": "Marvel",
+      "desc": "A billionaire industrialist and genius inventor, Tony Stark (Robert Downey Jr.), is conducting weapons tests overseas, but terrorists kidnap him to force him to build a devastating weapon. Instead, he builds an armored suit and upends his captors. Returning to America, Stark refines the suit and uses it to combat crime and terrorism."
+  }
+
+}
