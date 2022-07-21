@@ -3,11 +3,16 @@
 // with Intellisense and code completion in your
 // IDE or Text Editor.
 // ***********************************************
-// declare namespace Cypress {
-//   interface Chainable<Subject = any> {
-//     customCommand(param: any): typeof customCommand;
-//   }
-// }
+declare namespace Cypress {
+  interface Chainable<Subject = any> {
+   // customCommand(param: any): typeof customCommand;
+    getAndClick(el: string): Chainable;
+    isVisible(loc:string): Chainable;
+    typeAvalue(el:string, vla: string): Chainable;
+    createAbook(title: string, author: string, desc: string): Chainable;
+    invokeText(el:string): Chainable;
+  }
+}
 //
 // function customCommand(param: any): void {
 //   console.warn(param);
@@ -41,3 +46,6 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+
+
