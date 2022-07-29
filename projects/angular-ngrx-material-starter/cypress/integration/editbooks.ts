@@ -6,7 +6,7 @@ describe('Should edit existing books', () => {
         cy.getBooksEditorTitle();  
     });
 
-    it('should use allow the user to edit an existing book', () => {
+    it('should allow the user to edit an existing book', () => {
         cy.visitCrudPage();
         cy.clickCreateNewBookButton();
         cy.addBookTitle(); 

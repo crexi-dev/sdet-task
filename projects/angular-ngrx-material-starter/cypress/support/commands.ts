@@ -56,11 +56,12 @@ declare namespace Cypress {
         verifyBookInListOfCreatedBooks(): Chainable;
         clickFromListOfCreatedBooks(): Chainable; 
         clickEditIcon(): Chainable;
-        getDeleteIcon(): Chainable;
-        getCancelIcon(): Chainable;
+        clickDeleteIcon(): Chainable;
         clearExistingBookTitle(): Chainable;
         clearExistingAuthorName(): Chainable;
         clearExistingBookDescription(): Chainable;
-        getBookEditErrorMessage(): Chainable;         
+        getBookEditErrorMessage(): Chainable;
+        verifyBookHasBeenDeleted(): Chainable;
+        clickDeselectButton(): Chainable;           
     }
 }

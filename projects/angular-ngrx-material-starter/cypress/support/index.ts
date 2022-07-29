@@ -37,12 +37,8 @@ Cypress.Commands.add('clickEditIcon', () => {
     cy.get('[data-icon="edit"]').should('be.visible').click();; 
 });
 
-Cypress.Commands.add('getDeleteIcon', () => {
-    cy.contains('.mat-warn'); 
-});
-
-Cypress.Commands.add('getCancelIcon', () => {
-    cy.contains('span.ng-star-inserted > :nth-child(3)'); 
+Cypress.Commands.add('clickDeleteIcon', () => {
+    cy.get('.mat-warn').click(); 
 });
 
 Cypress.Commands.add('clickCreateNewBookButton', () => {
@@ -73,7 +69,7 @@ Cypress.Commands.add('clickSaveButton', () => {
 });
 
 Cypress.Commands.add('verifyBookInListOfCreatedBooks', () => {
-    cy.get('.mat-card').should('be.visible').and('have.length.above', 0); 
+    cy.get('.mat-card').should('be.visible').and('have.length.above', 1); 
 });
 
 Cypress.Commands.add('clearExistingBookTitle', () => {
@@ -90,4 +86,12 @@ Cypress.Commands.add('clearExistingBookDescription', () => {
 
 Cypress.Commands.add('getBookEditErrorMessage', () => {
     cy.get('#mat-error-1').should('be.visible'); 
+}); 
+
+Cypress.Commands.add('verifyBookHasBeenDeleted', () => {
+    cy.get('.mat-card').should('be.visible').and('have.length.at.most', 1); 
+});
+
+Cypress.Commands.add('clickDeselectButton', () => {
+    cy.get('span.ng-star-inserted > :nth-child(3)').click(); 
 }); 
