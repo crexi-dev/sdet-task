@@ -33,8 +33,8 @@ Cypress.Commands.add('getBooksEditorTitle', () => {
     cy.contains('h2', 'Book editor'); 
 })
 
-Cypress.Commands.add('getEditIcon', () => {
-    cy.contains('span button.mat-accent.ng-star-inserted'); 
+Cypress.Commands.add('clickEditIcon', () => {
+    cy.get('[data-icon="edit"]').should('be.visible').click();; 
 });
 
 Cypress.Commands.add('getDeleteIcon', () => {
@@ -74,4 +74,20 @@ Cypress.Commands.add('clickSaveButton', () => {
 
 Cypress.Commands.add('verifyBookInListOfCreatedBooks', () => {
     cy.get('.mat-card').should('be.visible').and('have.length.above', 0); 
-})
+});
+
+Cypress.Commands.add('clearExistingBookTitle', () => {
+    cy.get('#mat-input-0').clear(); 
+});
+
+Cypress.Commands.add('clearExistingAuthorName', () => {
+    cy.get('#mat-input-1').clear(); 
+});
+
+Cypress.Commands.add('clearExistingBookDescription', () => {
+    cy.get('#mat-input-2').clear(); 
+});
+
+Cypress.Commands.add('getBookEditErrorMessage', () => {
+    cy.get('#mat-error-1').should('be.visible'); 
+}); 

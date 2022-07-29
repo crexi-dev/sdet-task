@@ -54,8 +54,13 @@ declare namespace Cypress {
         addBookDescription(): Chainable; 
         clickSaveButton(): Chainable;
         verifyBookInListOfCreatedBooks(): Chainable;
-        getEditIcon(): Chainable;
+        clickFromListOfCreatedBooks(): Chainable; 
+        clickEditIcon(): Chainable;
         getDeleteIcon(): Chainable;
-        getCancelIcon(): Chainable;       
+        getCancelIcon(): Chainable;
+        clearExistingBookTitle(): Chainable;
+        clearExistingAuthorName(): Chainable;
+        clearExistingBookDescription(): Chainable;
+        getBookEditErrorMessage(): Chainable;         
     }
 }
