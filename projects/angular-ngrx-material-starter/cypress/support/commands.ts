@@ -41,8 +41,6 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-<<<<<<< Updated upstream
-=======
 declare namespace Cypress {
     interface Chainable<Subject = any> {
         visitCrudPage(): Chainable;
@@ -59,7 +57,10 @@ declare namespace Cypress {
         clickFromListOfCreatedBooks(): Chainable; 
         clickEditIcon(): Chainable;
         getDeleteIcon(): Chainable;
-        getCancelIcon(): Chainable;       
+        getCancelIcon(): Chainable;
+        clearExistingBookTitle(): Chainable;
+        clearExistingAuthorName(): Chainable;
+        clearExistingBookDescription(): Chainable;
+        getBookEditErrorMessage(): Chainable;         
     }
 }
->>>>>>> Stashed changes

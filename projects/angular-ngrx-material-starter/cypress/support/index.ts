@@ -14,9 +14,6 @@
 // ***********************************************************
 
 // When a command from ./commands is ready to use, import with `import './commands'` syntax
-<<<<<<< Updated upstream
-// import './commands';
-=======
 import './commands';
 import { uniqueNamesGenerator, adjectives, colors, animals } from 'unique-names-generator';
 
@@ -37,7 +34,7 @@ Cypress.Commands.add('getBooksEditorTitle', () => {
 })
 
 Cypress.Commands.add('clickEditIcon', () => {
-    cy.contains('span button.mat-accent.ng-star-inserted').click(); 
+    cy.get('[data-icon="edit"]').should('be.visible').click();; 
 });
 
 Cypress.Commands.add('getDeleteIcon', () => {
@@ -77,9 +74,20 @@ Cypress.Commands.add('clickSaveButton', () => {
 
 Cypress.Commands.add('verifyBookInListOfCreatedBooks', () => {
     cy.get('.mat-card').should('be.visible').and('have.length.above', 0); 
-}); 
+});
 
-Cypress.Commands.add('clickFromListOfCreatedBooks', () => {
-    cy.get('.mat-card h3').click({timeout:5000});
+Cypress.Commands.add('clearExistingBookTitle', () => {
+    cy.get('#mat-input-0').clear(); 
+});
+
+Cypress.Commands.add('clearExistingAuthorName', () => {
+    cy.get('#mat-input-1').clear(); 
+});
+
+Cypress.Commands.add('clearExistingBookDescription', () => {
+    cy.get('#mat-input-2').clear(); 
+});
+
+Cypress.Commands.add('getBookEditErrorMessage', () => {
+    cy.get('#mat-error-1').should('be.visible'); 
 }); 
->>>>>>> Stashed changes
