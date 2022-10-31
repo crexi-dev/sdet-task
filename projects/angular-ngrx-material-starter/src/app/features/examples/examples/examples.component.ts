@@ -24,10 +24,6 @@ export class ExamplesComponent implements OnInit {
     { link: 'stock-market', label: 'crx.examples.menu.stocks' },
     { link: 'theming', label: 'crx.examples.menu.theming' },
     { link: 'crud', label: 'crx.examples.menu.crud' },
-    {
-      link: 'simple-state-management',
-      label: 'crx.examples.menu.simple-state-management'
-    },
     { link: 'form', label: 'crx.examples.menu.form' },
     { link: 'notifications', label: 'crx.examples.menu.notifications' },
     { link: 'elements', label: 'crx.examples.menu.elements' },
