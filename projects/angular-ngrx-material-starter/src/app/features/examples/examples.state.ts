@@ -12,7 +12,7 @@ import { FormState } from './form/form.model';
 import { BookState } from './crud/books.model';
 
 export const FEATURE_NAME = 'examples';
-export const selectExamples = createFeatureSelector<State, ExamplesState>(
+export const selectExamples = createFeatureSelector< ExamplesState>(
   FEATURE_NAME
 );
 export const reducers: ActionReducerMap<ExamplesState> = {
