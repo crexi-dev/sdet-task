@@ -11,7 +11,6 @@ import { StockMarketContainerComponent } from './stock-market/components/stock-m
 import { CrudComponent } from './crud/components/crud.component';
 import { FormComponent } from './form/components/form.component';
 import { NotificationsComponent } from './notifications/components/notifications.component';
-import { UserComponent } from './simple-state-management/components/user.component';
 import { ElementsComponent } from './elements/elements.component';
 
 const routes: Routes = [
@@ -48,11 +47,6 @@ const routes: Routes = [
         path: 'crud/:id',
         component: CrudComponent,
         data: { title: 'crx.examples.menu.crud' }
-      },
-      {
-        path: 'simple-state-management',
-        component: UserComponent,
-        data: { title: 'crx.examples.menu.simple-state-management' }
       },
       {
         path: 'form',

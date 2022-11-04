@@ -1,4 +1,4 @@
-@use '~@angular/material' as mat;
+@use '@angular/material' as mat;
 
 $crx-black-primary: mat.define-palette(mat.$grey-palette, 700, 300, 900);
 $crx-black-accent: mat.define-palette(mat.$blue-grey-palette, 400);
