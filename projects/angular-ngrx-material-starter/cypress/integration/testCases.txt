@@ -1,0 +1,16 @@
+GIVEN I am on the '/examples/crud/'
+AND the Book editor is open
+WHEN enter at a minimum, valid text in the required fields
+AND select the Save button
+THEN the Title and Author is displayed on the left side of the page
+
+GIVEN I am on the '/examples/crud/'
+WHEN I select the Edit book button in the Book editor
+AND the selected record is editable
+WHEN I edit field data
+AND select the Save button
+THEN the edited field data is displayed on the left side of the page
+
+GIVEN I am on the '/examples/crud/'
+WHEN I select the Delete book button in the Book editor
+THEN the record is no longer displayed on the left side of the page

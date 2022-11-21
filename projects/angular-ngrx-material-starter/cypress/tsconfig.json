@@ -1,6 +1,6 @@
 {
   "extends": "../../../tsconfig.json",
-  "include": ["**/*.ts"],
+  "include": ["**/*.ts", "integration/takeHomeTestPageObjects.js", "integration/takeHomeTest.cy.js"],
   "compilerOptions": {
     "sourceMap": false,
     "types": ["cypress"]
