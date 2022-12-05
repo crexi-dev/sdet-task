@@ -1,6 +1,7 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
+  projectId: "un86wj",
   videosFolder: 'projects/angular-ngrx-material-starter/cypress/videos',
   screenshotsFolder:
     'projects/angular-ngrx-material-starter/cypress/screenshots',
