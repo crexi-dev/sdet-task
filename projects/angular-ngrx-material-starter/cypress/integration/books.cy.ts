@@ -11,17 +11,17 @@ describe('CRUD Library', () => {
   })
 
   it('should allow user to read existing entry', () => {
-    cy.verifyFirstBook(firstBookTitle, firstBookAuthor);
+    cy.verifyBook(firstBookTitle, firstBookAuthor);
   });
 
   it('should allow user to read existing entry on mobile', () => {
     cy.viewport('iphone-x')
-      .verifyFirstBook(firstBookTitle, firstBookAuthor);
+      .verifyBook(firstBookTitle, firstBookAuthor);
   });
 
   it('should allow user to create a new entry', () => {
     cy.createBook(bookTitle, bookAuthor, bookDescription)
-      .verifyFirstBook(bookTitle, bookAuthor)
+      .verifyBook(bookTitle, bookAuthor)
       .verifyBookDetails(bookTitle, bookAuthor, bookDescription);
   });
 
@@ -33,13 +33,13 @@ describe('CRUD Library', () => {
     cy.createBook(bookTitle, bookAuthor, bookDescription)
       .get('[data-icon="edit"]').click()
       .addBookDetails(updatedTitle, updatedAuthor, updatedDescription)
-      .verifyFirstBook(updatedTitle, updatedAuthor)
+      .verifyBook(updatedTitle, updatedAuthor)
       .verifyBookDetails(updatedTitle, updatedAuthor, updatedDescription);
   });
 
   it('should allow user to delete existing entry', () => {
     cy.createBook(bookTitle, bookAuthor, bookDescription)
       .get('[data-icon="trash"]').click()
-      .verifyFirstBook(firstBookTitle, firstBookAuthor);
+      .verifyBook(firstBookTitle, firstBookAuthor);
   });
 });

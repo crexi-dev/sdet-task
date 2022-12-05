@@ -54,7 +54,7 @@ Cypress.Commands.add('addBookDetails', (bookTitle, bookAuthor, bookDescription) 
     cy.get('.mat-primary > .mat-button-wrapper').click();
 })
 
-Cypress.Commands.add('verifyFirstBook', (bookTitle, bookAuthor) => {
+Cypress.Commands.add('verifyBook', (bookTitle, bookAuthor) => {
     cy.get('[class="row"]').contains('h3', bookTitle);
     cy.get('[class="row"]').contains('small', bookAuthor);
 })
