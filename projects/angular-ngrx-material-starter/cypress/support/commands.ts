@@ -41,3 +41,26 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('createBook', (bookTitle, bookAuthor, bookDescription) => {
+    cy.get('.add').click()
+      .addBookDetails(bookTitle, bookAuthor, bookDescription);
+})
+
+Cypress.Commands.add('addBookDetails', (bookTitle, bookAuthor, bookDescription) => {
+    cy.get('[data-placeholder="Title"]').clear().type(bookTitle);
+    cy.get('[data-placeholder="Author"]').clear().type(bookAuthor);
+    cy.get('[data-placeholder="Description"]').clear().type(bookDescription);
+    cy.get('.mat-primary > .mat-button-wrapper').click();
+})
+
+Cypress.Commands.add('verifyFirstBook', (bookTitle, bookAuthor) => {
+    cy.get('[class="row"]').contains('h3', bookTitle);
+    cy.get('[class="row"]').contains('small', bookAuthor);
+})
+
+Cypress.Commands.add('verifyBookDetails', (bookTitle, bookAuthor, bookDescription) => {
+    cy.get(':nth-child(2) > .route-animations-elements.ng-star-inserted > h3').contains(bookTitle);
+    cy.get('p').contains(bookDescription);
+    cy.get('i').contains(bookAuthor);
+})
