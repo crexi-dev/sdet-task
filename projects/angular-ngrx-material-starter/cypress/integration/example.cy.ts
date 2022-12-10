@@ -9,6 +9,7 @@ const titleField = '#mat-input-0';
 const authorField = '#mat-input-1';
 const descField = '#mat-input-2';
 const saveButton = '.col-12 > .mat-primary';
+const addButton = '.add';
 const editButton = 'span.ng-star-inserted > .mat-accent';
 const deleteButton = '.mat-warn';
 const readField = '.container';
@@ -30,7 +31,7 @@ describe('CRUD Flow', () => {
 
   it('Create a new book', () => {
     cy.visit('/examples/crud/');
-    cy.get('.add').click()
+    cy.get(addButton).click()
     cy.get(titleField).type(titleText)
     cy.get(authorField).type(authorText)
     cy.get(descField).type(descText)
@@ -40,8 +41,8 @@ describe('CRUD Flow', () => {
   });     
   
   it('Update an existing book: Error state', () => {
-    const titleError = '#mat-error-2'
-    const authorError = '#mat-error-3'
+    const titleError = '#mat-error-2';
+    const authorError = '#mat-error-3';
 
     cy.visit('/examples/crud/123');
     cy.get(editButton).click()
@@ -69,7 +70,7 @@ describe('CRUD Flow', () => {
     cy.visit('/examples/crud/123');
     cy.get(deleteButton).click()
     cy.get(readField).should('not.contain', 'React Programming') // Verifies successful Delete
-    cy.visit('/examples/crud/123'); // Edge case: Navigated to deleted book
+    cy.visit('/examples/crud/123'); // Edge case: Navigate to deleted book
     cy.get(nullBooksHeader).contains('Book editor') // Edge case: Verifies user is directed user to home view
 
   }); 
