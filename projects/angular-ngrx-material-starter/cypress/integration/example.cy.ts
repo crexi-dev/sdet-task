@@ -40,7 +40,7 @@ describe('CRUD Flow', () => {
 
   });     
   
-  it('Update an existing book: Error state', () => {
+  it('Error state when leaving Title, Author field blank before submitting', () => {
     const titleError = '#mat-error-2';
     const authorError = '#mat-error-3';
 
@@ -66,7 +66,7 @@ describe('CRUD Flow', () => {
 
   }); 
 
-  it('Delete a book', () => {
+  it('Visting a deleted book directs user to home view ', () => {
     cy.visit('/examples/crud/123');
     cy.get(deleteButton).click()
     cy.get(readField).should('not.contain', 'React Programming') // Verifies successful Delete
