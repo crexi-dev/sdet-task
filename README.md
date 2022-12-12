@@ -22,6 +22,9 @@ You should have [Angular CLI](https://angular.io/guide/setup-local) installed
 
 ## Additional Information
 You should spend no more than a couple of hours on this assignment
+
 You should not need to change any files in the 'src' directory
+
 This test project was generated using [Angular Material Starter](https://github.com/tomastrajan/angular-ngrx-material-starter)
+
 The test project also uses [Angular Material](https://material.angular.io/components/categories)
