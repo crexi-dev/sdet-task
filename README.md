@@ -1,30 +1,18 @@
-# Crexi SDET Task
+# Crexi SDET Task - Kimberly L. Sawh
 
-## Prerequisites
-You should have [Node](https://nodejs.org/en/download/) installed
-You should have [Angular CLI](https://angular.io/guide/setup-local) installed
+### Test Case Organization:
+* I wanted to organize the order of test case from the outermost elements then drilling inwards. 
+* I did my best to make sure each describe block can be run independent from each other
+* I ran each describe block with "describe.only" and the test passes
+* I also ran each describe block with "describe.skip" and the test also passes
 
-## Assignment Instructions
+### How I Structured The Code:
+* Fistly verifying the default elements within the Crud Books page: As seen in the "Crud Books page default elements" describe block
+* Then I focused on the functionality relating to the "Your books" and "Book editor" sections: Selecting a book, Displaying an empty book list, Adding and deleting books and Editing a book
 
-### Setup
-* [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) this repository
-* Open the project from your local directory using the code editor of your choice
-* Install local packages using `npm install`
-* Make sure the project runs locally using `ng serve`
-* Run cypress tests using `ng e2e`, you should see 1 passing test
-
-### Test Cases
-* Create test cases for CRUD Books `/examples/crud/` (adding, editing and deleting book data)
-* Create tests for those test cases in the `cypress` project
-* Having tests themselves, which are pretty straightforward, we're interested in the design patterns you chose, how do you structure the code, how do you seed/cleanup the data, etc. Even though the task is simple, we want you to apply the same principles you'd apply when working on real production task.
-* Create `README.md` explaining your design choises and thought process and potential improvements you'd think of
-* Submit a [Pull Request](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork)
-
-## Additional Information
-You should spend no more than a couple of hours on this assignment
-
-You should not need to change any files in the 'src' directory
-
-This test project was generated using [Angular Material Starter](https://github.com/tomastrajan/angular-ngrx-material-starter)
-
-The test project also uses [Angular Material](https://material.angular.io/components/categories)
+### Potential Improvements
+* Figure out ways to trim each "it" block for better reability
+* I would create a reusable function in the commands.ts file on adding a new book, maybe test for an edge case on how many books can the 'Your books' list handle
+* I would add checks to see if the imput fields accept special characters
+* I would like to add checks to see if the imput fields have a limit in characters
+* I would add a check on what happens if a user clicks the browser "back" button on the book editor form screen
