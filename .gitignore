@@ -52,3 +52,14 @@ Thumbs.db
 
 # debug
 debug.log
+
+#Cypress Files
+/projects/angular-ngrx-material-starter/cypress/downloads
+/projects/angular-ngrx-material-starter/cypress/results
+/projects/angular-ngrx-material-starter/cypress/reports
+/projects/angular-ngrx-material-starter/cypress/screenshots
+/projects/angular-ngrx-material-starter/cypress/videos
+/projects/angular-ngrx-material-starter/cypress/logs 
+
+#Cypress Env File
+cypress.env.json
