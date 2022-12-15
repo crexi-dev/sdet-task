@@ -1,4 +1,4 @@
-# Crexi SDET Task-
+# Crexi SDET Task
 
 ## Prerequisites
 You should have [Node](https://nodejs.org/en/download/) installed
