@@ -54,5 +54,5 @@ Thumbs.db
 debug.log
 
 #allure report folder
-/allure
+/allure-report
 /projects/angular-ngrx-material-starter/cypress/allure-report
