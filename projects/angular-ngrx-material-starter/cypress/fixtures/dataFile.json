@@ -1,0 +1,9 @@
+{
+    "BookDetails": {
+        "BookTitle": "Harry Potter Book1",
+        "BookAuthor": "J.K.Rowling",
+        "BookDescription": "Fantasy",
+        "EditedBookTitle": "Harry Potter Book2",
+        "EditedBookAuthor": "J.K.Rowling edited",
+        "EditedBookDescription": "Horror"
+}}
