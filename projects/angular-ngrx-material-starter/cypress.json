@@ -1,9 +1,11 @@
 {
   "integrationFolder": "projects/angular-ngrx-material-starter/cypress/integration",
-  "supportFile": "projects/angular-ngrx-material-starter/cypress/support/index.ts",
+  "supportFile": "projects/angular-ngrx-material-starter/cypress/support/index.js",
   "videosFolder": "projects/angular-ngrx-material-starter/cypress/videos",
   "screenshotsFolder": "projects/angular-ngrx-material-starter/cypress/screenshots",
-  "pluginsFile": "projects/angular-ngrx-material-starter/cypress/plugins/index.ts",
+  "pluginsFile": "projects/angular-ngrx-material-starter/cypress/plugins/index.js",
   "fixturesFolder": "projects/angular-ngrx-material-starter/cypress/fixtures",
-  "baseUrl": "http://localhost:4200"
+  "baseUrl": "http://localhost:4200",
+  "ignoreTestFiles": ["*.js", "*.md"],
+  "testFiles": "**/*.feature"
 }
