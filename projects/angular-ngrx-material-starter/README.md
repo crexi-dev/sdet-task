@@ -10,7 +10,7 @@ npm install typescript
 I have used BDD - Behavioral Driven Development framework approach to enhance reusability of steps and for ease of readability
 Thats why you will notice updates to package.json and cypress.json. 
 I also have allure reports generated after test.
-The tests are written in BDD format and has Background before each scenario that will be executed to launch the webpage.
+The tests are written in BDD format.
 I have used pageLocators folder for all the locators. 
 You will notice ,I have used JSON files in fixtures for data management.
 Ideally working with devloper's to have `data-test` tag makes test robust. 
@@ -38,7 +38,8 @@ image.png
 ## Improvements
 1. Integrate the tests with CI/CD pipeline like Jenkins
 2. Adapt parallelization when tests are time consuming
-3. Set standard rules/guidelines against PR review , may be template can help
-4. Implementing Pre-commit hooks for linting like eslint
-5. As part of regression we can be extensive in adding negative test cases
+3. Adding before and after test setup/cleanup scripts
+4. Set standard rules/guidelines against PR review , may be template can help
+5. Implementing Pre-commit hooks for linting like eslint
+6. As part of regression we can be extensive in adding negative test cases
 
